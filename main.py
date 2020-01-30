@@ -3,22 +3,13 @@ import os
 from defines import *
 import canvas
 
+# def render(field: list):
+#     for row in field:
+#         print("".join([str(line) for line in row]))
 
-def add_walls(field: list):
-    for x in range(SIZE["height"]):
-        for y in range(SIZE["width"]-2):
-            if y == 0 or y == SIZE["width"]-3:
-                field[x][y] = "|"
-            elif x == 0 or x == SIZE["height"]-1:
-                field[x][y] = "-"
+field = canvas.Canvas()
+os.system("cls")  # on Windows
+field.create_canvas()
+field.set_zone()
+field.render()
 
-
-def render(field: list):
-    for row in field:
-        print("".join([str(line) for line in row]))
-
-
-field = canvas.Canvas(SIZE).create_canvas()
-add_walls(field)
-os.system("cls")
-render(field)
