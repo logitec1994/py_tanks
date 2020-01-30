@@ -12,4 +12,3 @@ os.system("cls")  # on Windows
 field.create_canvas()
 field.set_zone()
 field.render()
-
