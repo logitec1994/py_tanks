@@ -2,9 +2,6 @@ from defines import *
 
 
 class Canvas:
-    def __init__(self):
-        self.canvas = list()
-
     def create_canvas(self):
         self.canvas = ([[" " for x in range(SIZE["width"])] for y in range(SIZE["height"])])
         return self.canvas
@@ -12,6 +9,9 @@ class Canvas:
     def render(self):
         for row in self.canvas:
             print("".join([str(line) for line in row]))
+
+    def get_canvas(self):
+        return self.canvas
 
     def set_zone(self):  # may return SIZE
         for x in range(SIZE["height"]):
