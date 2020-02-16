@@ -23,11 +23,3 @@ def set_zone():  # may return SIZE
                 canv.get_canvas()[x][y] = "|"
             elif x == 0 or x == defines.SIZE["height"]-1:
                 canv.get_canvas()[x][y] = "-"
-
-
-canv = canvas.Canvas()
-canv.create_canvas()
-
-update()
-
-canv.render()
